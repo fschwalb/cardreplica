@@ -1,0 +1,142 @@
+
+/** UTILIDADES **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+/** FUENTES **/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/** VARIABLES **/
+
+:root {
+    --color1: #A64253;
+    --color2: #70C1B3;
+
+    --blancoCustom: #FBFBFB;
+    --negroCustom: #080705;
+    --grisCustom: #7a7a7afa;
+    --grisCustom2: #868686fa;
+
+    --fuentePrim: 'Quicksand', sans-serif;
+}
+
+/** GLOBALES **/
+
+html {
+    font-size: 62.5%;    
+}
+
+body {
+    font-family: var(--fuentePrim);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.container {
+    width: 40rem;
+    margin: 10rem auto;
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+.img {
+    background-color: var(--blancoCustom);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.container-flex{
+    display: flex;
+    height: 6rem;
+}
+.temp {
+    background-color: var(--negroCustom);
+    border-bottom-left-radius: 2rem;
+    width: 70%;
+    color: var(--blancoCustom);
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+.temp__group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 1rem;
+}
+.temp__data {
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+.temp__text{
+    text-align: start;
+    padding: 0.2rem;
+}
+.temp__text__small {
+    text-align: start;
+    padding: 0.2rem;
+}
+
+.date {
+    background-color: var(--color2);
+    border-bottom-right-radius: 2rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blancoCustom);
+    font-size: 2rem;
+}
+.date__text {
+
+}
+@media (max-width: 437px) {
+    .container {
+        width: 90%;
+        margin: 10rem 1rem 10rem 1rem;
+    }
+    .temp {
+        width: 70%;
+    }
+    .date {
+        width: 30%;
+    }
+}
+@media (max-width: 285px) {
+    .temp__text__small {
+        display: none;
+    }
+    .temp__group {
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .date__text {
+        font-size: 1.4rem;
+    }
+    .temp__data {
+        font-size: 1.4rem
+    }
+}
